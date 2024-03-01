@@ -3,17 +3,28 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<VBox fx:id="mainWindow" alignment="CENTER" prefHeight="261.0" prefWidth="315.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.responsibillitychain.HelloController">
+<VBox fx:id="mainWindow" alignment="CENTER" prefHeight="261.0" prefWidth="375.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.responsibillitychain.HelloController">
 
    <children>
-      <Pane fx:id="mainPane" prefHeight="236.0" prefWidth="315.0" />
+      <Pane fx:id="mainPane" prefHeight="236.0" prefWidth="375.0"/>
       <HBox prefHeight="0.0" prefWidth="315.0">
           <padding>
               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
           </padding>
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#initialize" text="Заново" textAlignment="CENTER" />
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#initialize" text="Заново"/>
+            <Circle fill="DODGERBLUE" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Circle>
+            <Label fx:id="labelD" text="Алмазы: " />
+            <Circle fill="#ff1f1f" radius="12.0" stroke="BLACK" strokeType="INSIDE"/>
+            <Label fx:id="labelR" text="Редстоун:" />
+            <Circle fill="#ffff00" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="labelG" text="Золото:" />
          </children>
       </HBox>
    </children>
